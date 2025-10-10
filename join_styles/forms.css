@@ -1,0 +1,89 @@
+/* Donate Section Styles */
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #574937;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(87, 73, 55, 0.1);
+  margin-bottom: 2rem;
+}
+
+.card p {
+  color: #8c8c82;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.donate-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(87, 73, 55, 0.1);
+}
+
+.donate-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem auto;
+  background: linear-gradient(135deg, #dbb5b1, #dfb59b);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #574937;
+}
+
+.donate-title {
+  font-family: 'Marcellus', serif;
+  font-size: 1.2rem;
+  color: #574937;
+  margin-bottom: 1rem;
+}
+
+.donate-text {
+  color: #8c8c82;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.donate-button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #dbb5b1;
+  color: #574937;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(219, 181, 177, 0.4);
+}

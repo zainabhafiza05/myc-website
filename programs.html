@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Page</title>
+
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Crimson+Text&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tan+Pearl&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@100;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/taskbar.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="programs_styles/hero_programs.css" />
+  <link rel="stylesheet" href="programs_styles/youthgroup.css" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .taskbar.hide {
+      top: -100px; /* adjust based on your taskbar height */
+      transition: top 0.3s ease;
+    }
+
+    .taskbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #f4f3f0; /* or transparent */
+      backdrop-filter: blur(10px);
+      transition: top 0.3s ease;
+    }
+
+    .background {
+      padding-top: 70px; /* match taskbar height */
+    }
+  </style>
+</head>
+
+<body class="programs-page">
+  <header class="taskbar">
+    <div class="taskbar-container">
+      <a href="index.html" class="home-link">
+        <div class="left-section">
+          <img src="assets/logo.png" alt="MYC Logo" class="logo" />
+          <span class="site-title">Muslimah Youth for Change</span>
+        </div>
+      </a>
+      <nav class="right-section">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="programs.html">Programs</a>
+        <a href="resources.html">Resources</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="background">
+    <!-- Components -->
+    <div class="section-wrapper" id="hero_programs"></div>
+    <div class="section-wrapper" id="youthgroup"></div>
+    <div style="height: 100px;"></div>
+    <div class="section-wrapper" id="socialevents"></div>
+    <div style="height: 100px;"></div>
+    <div class="section-wrapper" id="workshops"></div>
+    <div style="height: 100px;"></div>
+    <div class="section-wrapper" id="leadership"></div>
+  </div>
+
+  <div style="height: 100px;"></div>
+  <div id="footer"></div>
+  <!-- Scripts -->
+  <script src="scripts/loadComponents.js"></script>
+  <script>
+    const taskbar = document.querySelector('.taskbar');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && scrollTop > taskbar.offsetHeight) {
+        // Scrolling down past taskbar height
+        taskbar.classList.add('hide');
+      } else {
+        // Scrolling up
+        taskbar.classList.remove('hide');
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+</body>
+</html>
+

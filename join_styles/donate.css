@@ -1,0 +1,69 @@
+/* Donate Directly Section Styles */
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #574937;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(87, 73, 55, 0.1);
+  margin-bottom: 2rem;
+}
+
+.card p {
+  color: #8c8c82;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.donate-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(87, 73, 55, 0.1);
+}
+
+.donate-title {
+  font-family: 'Marcellus', serif;
+  text-shadow: 0.4px 0 0 currentColor;
+  font-size: 1.2rem;
+  color: #574937;
+  margin-bottom: -1rem;
+}
+
+.donate-card img {
+  width: 100% !important;         /* Fill the card */
+  max-width: 250px !important;    /* Set your desired max size */
+  height: auto !important;        /* Maintain aspect ratio */
+  display: block !important;
+  margin: 1rem auto !important;
+}
+
+.donate-text {
+  color: black;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  font-family: 'Lora', serif;
+}

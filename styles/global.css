@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfdfd;
+  color: #000;
+}
+
+.bismillah-banner {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.bismillah-img {
+  max-width: 200px;
+  height: auto;
+}
+
+.white-bar {
+  height: 4rem; /* Adjust height as needed */
+  background-color: #ffffff;
+}

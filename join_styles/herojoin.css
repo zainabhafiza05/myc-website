@@ -1,0 +1,43 @@
+body {
+  background-color: #fcefee; /* soft pink background */
+}
+
+.herojoin {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Tan Pearl', serif;
+  font-size: 3rem;
+  color: #dbb5b1; /* rose accent */
+  margin-bottom: 1rem;
+}
+
+.hero-subtext {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #574937; /* warm brown */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .join-hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+}

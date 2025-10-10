@@ -1,0 +1,146 @@
+/* Section container */
+.events-section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.section-wrapper {
+  max-width: 2000px; /* 👈 controls how wide the whole section can go */
+  margin: 0 auto;     /* 👈 centers it */
+  padding: 0 1rem;    /* 👈 adds side breathing room */
+  box-sizing: border-box;
+}
+
+/* Section title */
+.events-title {
+  font-family: 'Tan Pearl', serif;
+  font-size: 2rem;
+  color: #574937;
+  margin-bottom: 2.5rem;
+  margin-top: -4rem;
+}
+
+.event-description {
+  margin: 0.8rem 0rem 0.8rem 0rem; /* 👈 adds space above and below the description */
+  line-height: 1.6; /* 👈 improves readability */
+  color: #574937;
+  font-size: 1rem;
+}
+
+/* Grid layout */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
+  gap: 2rem !important;
+}
+
+/* Individual event card */
+.event-card {
+  background-color: #ffffff;
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+  text-align: left;
+  font-size: 1rem;
+  font-family: 'Open Sans', serif;
+  color: #574937;
+  line-height: 2;
+  max-width: 600px;
+}
+
+/* Event image */
+.event-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Label at top of card */
+.event-label {
+  display: inline-block;
+  background-color: #627045;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Event title */
+.event-card h3 {
+  font-family: 'Crimson', serif;
+font-weight: 700;
+  font-size: 1.5rem;
+  color: #362817;
+  margin: 0.5rem 0;
+  margin-bottom: -0.5rem;
+}
+
+/* RSVP button */
+.rsvp-button {
+  display: inline-block;
+  margin-top: 1.5rem auto 0 auto;
+  background-color: #dbb5b1;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.rsvp-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.rsvp-button:hover {
+  background-color: #c9a4a0;
+}
+
+/* Icons before details */
+.event-card i {
+  color: #627045; /* Green icons */
+  margin-right: 1.2rem;
+  align-items: center; /* 👈 This centers the button horizontally */
+}
+
+/* Age range */
+.event-age {
+  margin-top: 0rem;
+  color: #574937; /* Same as other details */
+  font-style: normal; /* Remove italic */
+  font-weight: normal;
+}
+
+/* Image wrapper now outside card */
+.event-image-wrapper {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Full image display */
+.event-image-wrapper img {
+  width: 100%;
+  max-height: 600px;
+  max-width: 600px;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Label above image */
+.event-type-label {
+  font-family: 'Marcellus', sans-serif;
+  text-shadow: 0.2px 0 0 currentColor;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}

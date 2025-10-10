@@ -1,0 +1,57 @@
+.offerings {
+  padding: 1rem 5rem;
+  background-color: transparent; /* No beige background */
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 0rem;
+}
+
+.offerings-title {
+  font-family: 'Tan Pearl', serif;
+  font-size: 2.5rem;
+  color: #574937;
+  margin-bottom: 2.5rem;
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.offering-card {
+  background-color: #fdedec; /* Beige card background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  font-size: 0.95rem;
+  font-family: 'Georgia', serif;
+}
+
+.offering-card:hover {
+  transform: translateY(-5px);
+}
+
+.offering-card i {
+  font-size: 1.7rem;
+  color: #627045;
+  margin-bottom: 0.75rem;
+}
+
+.offering-card h3 {
+  font-family: 'Marcellus', serif;
+  font-size: 1.4rem;
+  color: #574937;
+  margin-bottom: 0.5rem;
+  /* text-shadow: 0.2px 0 0 currentColor; */
+}
+
+.offering-card p {
+  font-family: 'Lora', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+

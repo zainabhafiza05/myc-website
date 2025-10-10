@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Page</title>
+
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Crimson+Text&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tan+Pearl&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/taskbar.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="join_styles/socials.css" />
+  <link rel="stylesheet" href="join_styles/forms.css" />
+  <link rel="stylesheet" href="join_styles/donate.css" />
+  <link rel="stylesheet" href="join_styles/collab.css" />
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-color: #f5e4e2; /* #f5f0f1 #fbecee #ffebed #f0eae7 #f5e4e2*/
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+      padding: 6.5rem 2rem 4rem 2rem;
+      text-align: center;
+      <!-- background-color: #8b5c5a; -->
+    }
+
+    .content h1 {
+      font-family: 'PlayFair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #000000;
+      margin: 4rem 0 1rem 0;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .content p {
+      color: #000000;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: -3rem;
+    }
+
+    .about-page .taskbar {
+      top: 0;
+      position: fixed;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .section-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+
+    .taskbar-container {
+      padding: 0.8rem 2rem;
+      position: static;
+    }
+
+    .taskbar {
+      top: 0;
+      position: static;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      padding: 0rem 2rem;
+      background-color: transparent;
+      border: transparent;
+    }
+
+    nav.right-section a {
+      position: relative;
+      z-index: 4;
+    }
+
+    .taskbar.hide {
+      top: -100px; /* adjust based on your taskbar height */
+      transition: top 0.3s ease;
+    }
+
+    .taskbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #ffffff; /* or transparent */
+      backdrop-filter: blur(10px);
+      transition: top 0.3s ease;
+    }
+
+    body, .page-wrapper {
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+  </style>
+</head>
+
+<body class="about-page">
+  </header>
+  <!-- Taskbar -->
+  <div class="background">
+    <header class="taskbar">
+      <div class="taskbar-container">
+        <a href="index.html" class="home-link">
+          <div class="left-section">
+            <img src="assets/logo.png" alt="MYC Logo" class="logo" />
+            <span class="site-title">Muslimah Youth for Change</span>
+          </div>
+        </a>
+        <nav class="right-section">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="programs.html">Programs</a>
+          <a href="resources.html">Resources</a>
+          <a href="join.html">Join</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1>
+        Join the <span style="
+          background: linear-gradient(to right, #865651, #9b7b62, #817759, #627045, black);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: bold;
+        ">MYC</span> Community
+      </h1>
+      <!-- COLOR CHOICE: a94c6f -->
+      <p>
+        Whether you're looking to
+        <a href="#socials" style="color: #87514b; text-decoration: underline;">connect</a>,
+        <a href="#collab" style="color: #87514b; text-decoration: underline;">collaborate</a>, or
+        <a href="#donate" style="color: #87514b; text-decoration: underline;">contribute</a>,
+        this is your space to grow in sisterhood, faith, and impact. From heartfelt conversations to powerful initiatives, joining MYC means becoming part of a movement rooted in love, leadership, and lasting change.
+      </p>
+
+      <p class="joincontact" style="margin-top: 4.5rem; margin-bottom: -0.6rem; font-size: 1.3rem; color: #574937; font-weight: bold; font-family: 'Playfair Display', serif;">
+        <!-- Have questions? Reach out to us at <br/> -->
+        <a href="mailto:askmycgirls@gmail.com" style="color: #87514b; text-decoration: underline;">askmycgirls@gmail.com</a>
+        |
+        <a href="tel:+4259740296" style="color: #87514b; text-decoration: underline;">(425) 974-0296</a>.
+      </p>
+    </div>
+
+    <!-- Components -->
+    <div class="section-wrapper" id="herojoin"></div>
+    <div class="section-wrapper" id="socials"></div>
+    <div class="section-wrapper" id="forms"></div>
+    <div class="section-wrapper" id="donate"></div>
+    <div class="section-wrapper" id="collab"></div>
+
+  </div>
+  <div id="footer"></div>
+  <!-- Scripts -->
+  <script src="scripts/loadComponents.js"></script>
+  <script>
+    const taskbar = document.querySelector('.taskbar');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && scrollTop > taskbar.offsetHeight) {
+        // Scrolling down past taskbar height
+        taskbar.classList.add('hide');
+      } else {
+        // Scrolling up
+        taskbar.classList.remove('hide');
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+</body>
+</html>

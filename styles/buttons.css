@@ -1,0 +1,46 @@
+.section-title {
+  font-family: 'Tan Pearl', serif;
+  font-size: 2.5rem;
+  color: #574937;
+  margin-bottom: 0rem; /* 👈 Reduced spacing */
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.action-btn {
+  background-color: #dbb5b1;
+  color: black;
+  font-family: 'Marcellus', serif;
+  text-shadow: 0.2px 0 0 currentColor;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #c9a4a0;
+}
+
+/* Responsive stacking on smaller screens */
+@media (max-width: 600px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-btn {
+    width: 80%;
+    text-align: center;
+  }
+}

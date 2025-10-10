@@ -1,0 +1,88 @@
+.site-footer {
+  background-color: #f4f3f0;
+  padding: 3rem 2rem 2rem;
+  font-size: 0.95rem;
+  color: #574937;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6; /* 👈 More space between lines */
+}
+
+/* Grid layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+/* MYC column title in tan pearl + girl color */
+.footer-grid h3.myc-title {
+  font-family: 'Tan Pearl', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #627045; /* 👈 Tan pearl + girl color */
+}
+
+/* Other headers in brown */
+.footer-grid h3:not(.myc-title),
+.footer-grid h4 {
+  font-family: 'Inter', serif;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #574937; /* 👈 Brown */
+}
+
+/* Contact icons */
+.footer-grid .contact-info i {
+  color: #627045;
+  margin-right: 0.5rem;
+}
+
+/* List and paragraph spacing */
+.footer-grid p,
+.footer-grid li {
+  margin: 0.6rem 0;
+  font-size: 0.9rem;
+  color: #8f7f6e;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-grid a {
+  color: #8f7f6e;;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #627045;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #dbb5b1; /* Soft pink on hover */
+  text-decoration: none;
+}
+
+/* Footer bottom with thin line */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #dcd9d2; /* 👈 Thin line above rights reserved */
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #574937;
+}
+

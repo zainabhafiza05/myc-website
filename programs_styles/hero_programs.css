@@ -1,0 +1,89 @@
+/* Hero Background Image */
+.hero-image {
+  background-image: url('phero3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+  background: rgba(87, 73, 55, 0.75); soft brown overlay
+  backdrop-filter: blur(200px);
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: -15rem;
+  margin-bottom: -15rem;
+}
+
+
+/* Title */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0rem;
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  color: #f0f8e8;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  display: block;
+  text-align: center;
+}
+
+/* Button Container */
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #574937;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Georgia', serif;
+  margin-bottom: 0rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background: white;
+}

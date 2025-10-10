@@ -1,0 +1,16 @@
+.bismillah-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* can make light beige #f5e6d3 background */
+  text-align: center;
+  padding: 01rem 0rem 0rem 0rem; /* top right bottom left */
+  z-index: 1001; /* Above the taskbar */
+}
+
+.bismillah-img {
+  max-width: 250px;
+  height: auto;
+}
+

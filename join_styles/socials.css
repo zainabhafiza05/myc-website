@@ -1,0 +1,72 @@
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(87, 73, 55, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(87, 73, 55, 0.15);
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.whatsapp-icon {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.instagram-icon {
+  background: linear-gradient(135deg, #E4405F, #C13584, #833AB4);
+}
+
+.social-title {
+  font-family: 'Marcellus', serif;
+  font-size: 1.3rem;
+  color: #574937;
+  margin-bottom: 0.5rem;
+}
+
+.social-description {
+  color: #8c8c82;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Lora', serif;
+}
+
+.social-button {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background: #627045;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(87, 73, 55, 0.3);
+}
+

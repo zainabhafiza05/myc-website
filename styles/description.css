@@ -1,0 +1,25 @@
+.description {
+  text-align: center;
+  padding: 3rem 2rem 0rem 2rem;
+  background-color: white;
+}
+
+.title {
+  font-family: 'Tan Pearl', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #574937;
+  margin-bottom: 1rem; /* 👈 Reduced spacing */
+  text-align: center;
+}
+
+.hero-description {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  /* #574937 */
+  color: #574937;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 00;
+}

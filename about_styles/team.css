@@ -1,0 +1,103 @@
+.section-title {
+  font-size: 2.5rem;
+  color: #574937;
+  text-align: center;
+}
+
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 2rem;
+  justify-items: center;
+}
+
+
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+
+
+.team-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  margin-top: 4.5rem;
+  padding: 2rem 2rem; /* 👈 adds left and right spacing */
+}
+
+@media (max-width: 600px) {
+  .team-section {
+    padding: 0 1rem;
+  }
+}
+
+.team-card {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(87, 73, 55, 0.2);
+  text-align: center;
+  max-width: 300px;
+}
+
+.hijab-icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background-color: #dbb5b1;
+  padding: 0.3rem;
+  box-shadow: 0 4px 8px rgba(87, 73, 55, 0.2);
+}
+
+.member-name {
+  font-family: 'Marcellus', serif;
+  text-shadow: 0.2px 0 0 currentColor;
+  font-size: 1.4rem;
+  color: #574937;
+  margin-bottom: -1rem;
+  margin-top: 0.5rem;
+}
+
+.member-role {
+  color: #627045;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.member-bio {
+  /* color: #8c8c82; */
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-family: 'Open Sans', serif;  /* 👈 keep lora or this */
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .member-name {
+    font-size: 1.2rem;
+  }
+
+  .member-bio {
+    font-size: 0.9rem;
+  }
+}

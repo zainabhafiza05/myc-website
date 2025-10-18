@@ -1,3 +1,4 @@
+
 .offerings {
   padding: 1rem 5rem;
   background-color: transparent; /* No beige background */
@@ -13,20 +14,29 @@
   margin-bottom: 2.5rem;
 }
 
+
 .offerings-grid {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
 .offering-card {
-  background-color: #fdedec; /* Beige card background */
+  display: block;
+  text-decoration: none;       /* removes underline from links */
+  color: inherit;              /* keeps your custom text colors */
+  background-color: #fdedec;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
   font-size: 0.95rem;
   font-family: 'Georgia', serif;
+}
+
+.offerings-grid a {
+  display: block;
 }
 
 .offering-card:hover {
@@ -36,16 +46,22 @@
 .offering-card i {
   font-size: 1.7rem;
   color: #627045;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .offering-card h3 {
   font-family: 'Marcellus', serif;
   font-size: 1.4rem;
-  color: #574937;
+  color: #944d33; /*#753831 #aa5d42*/
   margin-bottom: 0.5rem;
-  /* text-shadow: 0.2px 0 0 currentColor; */
+  text-shadow: 0.2px 0 0 currentColor;
 }
+
+/* .offerings-grid-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem 0rem 2rem;
+} */
 
 .offering-card p {
   font-family: 'Lora', sans-serif;
@@ -54,4 +70,26 @@
   line-height: 1.5;
 }
 
+.card-arrow {
+  display: inline-block;
+  margin-top: 1.2rem;
+  width: 28px;
+  height: 12px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 12' fill='none'><path d='M0 6H26M26 6L20 1M26 6L20 11' stroke='%23627045' stroke-width='2' stroke-linecap='square'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
 
+.offering-card:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .offerings-title {
+    font-family: 'Tan Pearl', serif;
+    font-size: 2.2rem;
+    color: #574937;
+    margin-bottom: 2.5rem;
+  }
+}

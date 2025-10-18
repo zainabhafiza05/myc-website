@@ -32,6 +32,7 @@
       margin: 0;
       padding: 0;
     }
+
     .taskbar.hide {
       top: -100px; /* adjust based on your taskbar height */
       transition: top 0.3s ease;
@@ -46,6 +47,12 @@
       background-color: #ffffff; /* or transparent */
       backdrop-filter: blur(10px);
       transition: top 0.3s ease;
+    }
+
+    .taskbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
     }
 
     .background {
@@ -116,9 +123,9 @@
     </button>
     <div class="section-wrapper" id="youthgroup"></div>
     <div style="height: 100px;"></div>
-    <div class="section-wrapper" id="socialevents"></div>
-    <div style="height: 100px;"></div>
     <div class="section-wrapper" id="workshops"></div>
+    <div style="height: 100px;"></div>
+    <div class="section-wrapper" id="socialevents"></div>
     <div style="height: 100px;"></div>
     <div class="section-wrapper" id="leadership"></div>
   </div>

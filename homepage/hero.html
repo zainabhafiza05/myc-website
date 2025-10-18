@@ -23,25 +23,170 @@
     <div class="stats-section">
       <div class="stat">
         <div class="stat-content">
-          <span class="stat-number" data-target="5">250+</span><br/>
+          <span class="stat-number" data-target="250">250+</span><br/>
           <span class="stat-label">Active Members</span>
         </div>
       </div>
       <div class="stat">
         <div class="stat-content">
-          <span class="stat-number" data-target="5">4</span><br/>
+          <span class="stat-number" data-target="4">4</span><br/>
           <span class="stat-label">Years Strong</span>
         </div>
       </div>
       <div class="stat">
         <div class="stat-content">
-          <span class="stat-number" data-target="5">60+</span><br/>
+          <span class="stat-number" data-target="60">60+</span><br/>
           <span class="stat-label">Events</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+  <script>
+        // Smooth vertical slot machine spinning counter function
+        function animateSlotMachine(element, target, finalText, duration = 2500) {
+            const spinDuration = duration * 0.8; // 80% of time for spinning
+            const settleDuration = duration * 0.2; // 20% of time for settling
+
+            let startTime = null;
+            let currentValue = 0;
+            let animationId = null;
+
+            // Store original text content
+            const originalText = element.textContent;
+
+            // Create reel container
+            const reel = document.createElement('div');
+            reel.className = 'number-reel';
+            reel.style.transition = 'transform 0.05s linear';
+
+            const digit = document.createElement('div');
+            digit.className = 'number-digit';
+            digit.textContent = '0';
+
+            reel.appendChild(digit);
+            element.innerHTML = '';
+            element.appendChild(reel);
+
+            function animate(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const totalProgress = elapsed / duration;
+
+                if (totalProgress < 0.8) {
+                    // Spinning phase - continuous smooth animation
+                    const spinProgress = elapsed / spinDuration;
+
+                    // Calculate spin speed (starts fast, slows down)
+                    const baseSpeed = 0.3;
+                    const speedMultiplier = Math.pow(1 - spinProgress, 2) * 15 + 1;
+                    const spinSpeed = baseSpeed * speedMultiplier;
+
+                    // Generate value with bias toward target
+                    const bias = target * Math.pow(spinProgress, 2) * 0.8;
+                    const randomRange = target * (1 - spinProgress * 0.9);
+                    const randomOffset = (Math.random() - 0.5) * randomRange;
+                    const newValue = Math.max(0, Math.floor(bias + randomOffset));
+
+                    // Smooth vertical movement
+                    const movement = Math.sin(elapsed * spinSpeed) * 80;
+                    reel.style.transform = `translateX(-50%) translateY(${movement}%)`;
+
+                    // Update number periodically during spin
+                    if (Math.floor(elapsed / 60) !== Math.floor((elapsed - 16) / 60)) {
+                        digit.textContent = newValue;
+                        currentValue = newValue;
+                    }
+
+                } else {
+                    // Settling phase - smooth approach to target
+                    const settleProgress = (elapsed - spinDuration) / settleDuration;
+                    const easeOut = 1 - Math.pow(1 - Math.min(settleProgress, 1), 4);
+
+                    // Smooth approach to target value with better interpolation
+                    const difference = target - currentValue;
+                    const settleValue = currentValue + (difference * easeOut);
+
+                    // Only update if there's a meaningful change
+                    if (Math.abs(settleValue - currentValue) > 0.1) {
+                        digit.textContent = Math.floor(settleValue);
+                        currentValue = settleValue;
+                    }
+
+                    // Gradual reduction of movement with smoother easing
+                    const movementIntensity = Math.max(0, 1 - Math.pow(settleProgress, 2));
+                    const movement = Math.sin(elapsed * 0.08) * movementIntensity * 10;
+                    reel.style.transform = `translateX(-50%) translateY(${movement}%)`;
+                }
+
+                if (totalProgress < 1) {
+                    animationId = requestAnimationFrame(animate);
+                } else {
+                    // Smooth final transition
+                    reel.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    reel.style.transform = 'translateX(-50%) translateY(-20%)';
+
+                    setTimeout(() => {
+                        digit.textContent = finalText;
+                        reel.style.transform = 'translateX(-50%) translateY(0%)';
+
+                        // Special pop effect for "Years Strong" stat
+                        const isYearsStrong = element.closest('.stat').querySelector('.stat-label').textContent === 'Years Strong';
+
+                        setTimeout(() => {
+                            element.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                            element.style.transform = isYearsStrong ? 'scale(1.2)' : 'scale(1.05)';
+
+                            setTimeout(() => {
+                                element.style.transform = 'scale(1)';
+                                setTimeout(() => {
+                                    element.style.transition = '';
+                                    reel.style.transition = '';
+                                }, 300);
+                            }, isYearsStrong ? 200 : 100);
+                        }, 200);
+                    }, 200);
+                }
+            }
+
+            animationId = requestAnimationFrame(animate);
+        }
+
+        // Start animations when page loads
+        window.addEventListener('load', () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+
+            // Add a small delay before starting the animations
+            setTimeout(() => {
+                statNumbers.forEach((element, index) => {
+                    const target = parseInt(element.getAttribute('data-target'));
+                    const finalText = element.textContent; // Keep original text like "250+" or "60+"
+
+                    // Stagger the animations slightly
+                    setTimeout(() => {
+                        animateSlotMachine(element, target, finalText, 2500);
+                    }, index * 200);
+                });
+            }, 300);
+        });
+
+        // Then add this block:
+        document.addEventListener('DOMContentLoaded', () => {
+          const statNumbers = document.querySelectorAll('.stat-number');
+          if (statNumbers.length > 0) {
+            setTimeout(() => {
+              statNumbers.forEach((element, index) => {
+                const target = parseInt(element.getAttribute('data-target'));
+                const finalText = element.textContent;
+                setTimeout(() => {
+                  animateSlotMachine(element, target, finalText, 2500);
+                }, index * 200);
+              });
+            }, 300);
+          }
+        });
+    </script>
 
 
 

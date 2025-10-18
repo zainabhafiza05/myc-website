@@ -71,7 +71,7 @@
 /* Event title */
 .event-card h3 {
   font-family: 'Crimson', serif;
-font-weight: 700;
+  font-weight: 700;
   font-size: 1.5rem;
   color: #362817;
   margin: 0.5rem 0;
@@ -131,16 +131,17 @@ font-weight: 700;
   max-width: 600px;
   border-radius: 12px;
   display: block;
+  text-align: center;
 }
 
-/* Label above image */
 .event-type-label {
-  font-family: 'Marcellus', sans-serif;
-  text-shadow: 0.2px 0 0 currentColor;
-  font-size: 1.2rem;
+  font-family: 'Marcellus', sans-serif; text-shadow: 0.2px 0 0
+  currentColor; font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #856d4e;
   text-align: center;
 }
+

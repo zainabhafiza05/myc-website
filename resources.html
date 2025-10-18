@@ -67,7 +67,7 @@
     .hero-title {
       font-weight: bold;
       color: #465031;
-      margin-top: -1rem;
+      margin-top: 5.5rem;
       margin-bottom: 16px;
       line-height: 1.2;
       font-family: 'PlayFair Display', serif;
@@ -82,6 +82,32 @@
       line-height: 1.6;
       font-family: 'Georgia', serif;
       font-size: 1.2rem;
+    }
+
+    .hero-contribute {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #b44134;
+      /*background: linear-gradient(to right, #fceee6, #fef7f2);*/
+      /*box-shadow: 0 4px 12px rgba(183, 117, 110, 0.25);*/
+      padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+      border-radius: 12px;
+      margin-top: 2.5rem;
+      max-width: 480px;
+      margin-left: -0.6rem;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .contribute-link {
+      color: #b44134;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .contribute-link:hover {
+      color: black;
     }
 
     .hero-text {
@@ -104,7 +130,8 @@
     .hero-buttons-vertical {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* two equal columns */
-      gap: 16px;
+      row-gap: 12px;
+      column-gap: 8px;
       justify-content: center;
       margin: 40px 0;
       padding: 0 1rem;
@@ -172,6 +199,12 @@
       transition: top 0.3s ease;
     }
 
+    .taskbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
+    }
+
     .taskbar {
       position: fixed;
       top: 0;
@@ -221,7 +254,7 @@
     @keyframes fadeIn {
         from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(25px);
         }
         to {
             opacity: 1;
@@ -262,6 +295,9 @@
             <h1 class="hero-title">Community Resources</h1>
             <p class="hero-description">
               Discover valuable resources, educational materials, and supportive links curated specifically for young Muslimahs and their families.
+            </p>
+            <p class="hero-contribute">
+              Have a resource to share? <a href="submit-resource.html" class="contribute-link">Submit one here!</a>
             </p>
           </div>
 

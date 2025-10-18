@@ -43,6 +43,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     .background {
@@ -250,7 +251,7 @@
       left: 0;
       width: 100%;
       z-index: auto;
-      padding: 0rem 2rem;
+      padding: 0rem 0rem;
       background-color: transparent;
       border: transparent;
     }
@@ -258,6 +259,12 @@
     body, .page-wrapper {
       position: static;
       overflow: visible;
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        overflow-x: hidden;
+      }
     }
 
   </style>

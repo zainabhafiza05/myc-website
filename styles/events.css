@@ -34,6 +34,12 @@
   justify-items: center;
 }
 
+.events-grid-wrapper {
+  max-width: 2000px;     /* ✅ controls total width of the grid */
+  margin: 0 auto;        /* ✅ centers the wrapper */
+  padding: 0 2rem 0rem 2rem;       /* ✅ adds breathing room on small screens */
+}
+
 /* Individual event card */
 .event-card {
   background-color: #f6ebe2; /*#f5ede5	#f6ebe2*/
@@ -169,4 +175,18 @@
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
   z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .events-title {
+    font-family: 'Tan Pearl', serif;
+    font-size: 2.2rem;
+    color: #574937;
+    margin-bottom: 2.5rem;
+  }
+
+  .view-all-button {
+    font-size: 1.05rem;
+    padding: 0.7rem 1.4rem;
+  }
 }

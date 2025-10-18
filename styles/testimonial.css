@@ -1,6 +1,6 @@
 .testimonial {
   background-color: #faf9f8;
-  padding: 2rem 2rem;
+  padding: 3.5rem 2rem 2rem 2rem;
   text-align: center;
 }
 
@@ -68,6 +68,50 @@
   font-family: 'Marcellus', sans-serif;
   font-weight: 1000;
 }
+
+.read-more-link {
+  display: inline-block;
+  margin-top: 0rem;
+  font-size: 0.95rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #574937;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+}
+
+.testimonial-footer {
+  text-align: center;
+}
+
+.read-more-link:hover {
+  color: #3e4f2f;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+    max-width: 95%; /* ✅ Shrinks the card on small screens */
+    padding: 1.2rem;
+  }
+
+  .testimonial h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-card .quote {
+    font-size: 1rem;
+  }
+
+  .testimonial-card .author {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 

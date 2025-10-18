@@ -56,7 +56,6 @@
       margin: 0 auto;
       padding: 6.5rem 2rem 4rem 2rem;
       text-align: center;
-      <!-- background-color: #8b5c5a; -->
     }
 
     .content h1 {
@@ -93,30 +92,15 @@
       box-sizing: border-box;
     }
 
-    .taskbar-container {
-      padding: 0.8rem 2rem;
-      position: static;
-    }
-
-    .taskbar {
-      top: 0;
-      position: static;
-      left: 0;
-      width: 100%;
-      z-index: 3;
-      padding: 0rem 2rem;
-      background-color: transparent;
-      border: transparent;
-    }
-
-    nav.right-section a {
-      position: relative;
-      z-index: 4;
-    }
-
     .taskbar.hide {
       top: -100px; /* adjust based on your taskbar height */
       transition: top 0.3s ease;
+    }
+
+    .taskbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
     }
 
     .taskbar {
@@ -132,8 +116,13 @@
 
     body, .page-wrapper {
       position: relative;
-      overflow-x: hidden;
       overflow-y: auto;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
   </style>
@@ -142,7 +131,7 @@
 <body class="about-page">
   </header>
   <!-- Taskbar -->
-  <div class="background">
+  <div class="container">
     <header class="taskbar">
       <div class="taskbar-container">
         <a href="index.html" class="home-link">

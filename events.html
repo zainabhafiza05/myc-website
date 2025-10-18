@@ -95,6 +95,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
     .content {
       position: relative;
       z-index: 2;
@@ -139,6 +144,47 @@
       transition: top 0.3s ease;
     }
 
+    #details {
+      min-height: 500px; /* adjust based on expected height */
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+      animation-delay: 0.1s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .left-section {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: 0rem;
+      }
+    }
+
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.02); }
+    }
+
+    .today-event-message {
+      animation: pulse-soft 1s ease-in-out infinite;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .today-event-message {
+        display: inline-block;
+        color: #b7756e;
+        font-family: 'Lora', serif;
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+    }
+
     .background {
       padding-top: 70px; /* match taskbar height */
     }
@@ -173,7 +219,6 @@
     <!-- <div style="height: 100px;"></div> -->
   </div>
 
-  <h2 style="font-family: 'Tan Pearl', serif; font-size: 2.5rem; color: #000000; margin-bottom: 2.5rem; margin-top: -4rem; font-weight: bold;">Upcoming Events</h2>
   <div class="section-wrapper" id="details"></div>
 
   <h2 style="font-family: 'Tan Pearl', serif; font-size: 2.5rem; color: #000000; margin-bottom: -1rem; margin-top: 2rem; font-weight: bold; text-align: center">Calendar</h2>
@@ -201,16 +246,20 @@
 
         <div id="calendar-grid" class="grid grid-cols-7 gap-2"></div>
 
-        <div class="mt-4 flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-2">
-            <div class="w-4 h-4 gradient-bg rounded"></div>
-            <span class="text-gray-600">Event Day</span>
+        <div class="calendar-legend mt-4 flex items-center gap-20 text-sm text-gray-600">
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <div class="w-4 h-4 gradient-bg rounded"></div>
+              <span>Event Day</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-4 h-4 bg-rose-200 rounded"></div>
+              <span>Today</span>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <div class="w-4 h-4 bg-rose-200 rounded"></div>
-            <span class="text-gray-600">Today</span>
-          </div>
+          <!-- Message will be injected here -->
         </div>
+
       </div>
 
       <!-- Quarter Overview -->
@@ -303,7 +352,9 @@
         );
 
         let classes = 'calendar-day p-3 text-center rounded-lg cursor-pointer ';
-        if (isToday) {
+        if (isToday && hasEvent) {
+          classes += 'event-day '; // ✅ prioritize event styling
+        } else if (isToday) {
           classes += 'bg-rose-200 text-rose-800 font-bold ';
         } else if (hasEvent) {
           classes += 'event-day ';
@@ -316,6 +367,28 @@
 
       document.getElementById('calendar-grid').innerHTML = calendarHTML;
       document.getElementById('calendar-title').textContent = `${months[month]} ${year}`;
+
+      const isTodayEvent = eventDates.some(date =>
+        date.toDateString() === today.toDateString()
+      );
+
+      const legend = document.querySelector('.calendar-legend');
+      if (legend) {
+        const existingMessage = legend.querySelector('.today-event-message');
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+
+        if (isTodayEvent) {
+          const message = document.createElement('div');
+          message.className = 'today-event-message';
+          message.style.color = '#d63384';
+          message.style.fontFamily = "'Lora', serif";
+          message.style.fontSize = '1rem';
+          message.textContent = 'There is an event today! 🌿';
+          legend.appendChild(message);
+        }
+      }
     }
 
     function previousMonth() {

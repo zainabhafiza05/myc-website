@@ -23,26 +23,28 @@
 }
 
 .testimonial {
-  width: 100%;
-  max-width: 800px; /* 👈 controls card width */
+  width: 102%;
+  max-width: 900px; /* 👈 controls card width */
   background: white;
   padding: 2.5rem;
   border-radius: 25px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 30px rgba(87, 73, 55, 0.2);
   position: relative;
+  animation: fadeIn 0.8s ease-out;
 }
 
 
 .testimonial::before {
   content: '"';
   font-size: 4rem;
-  color: #dbb5b1;
+  color: #9d655f;
   position: absolute;
   top: 1rem;
   left: 1.5rem;
   font-family: 'Playfair Display', serif;
 }
+
 
 .testimonial-text {
   /* color: #8c8c82; */
@@ -59,9 +61,20 @@
   text-align: right;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+  .testimonial {
+    width: 83%;
   }
 
   .testimonials-grid {

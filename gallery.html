@@ -84,6 +84,7 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
       animation: fadeIn 0.6s ease-out;
+      animation-fill-mode: both;
     }
 
     .event-image {
@@ -173,6 +174,12 @@
     .taskbar.hide {
       top: -100px; /* adjust based on your taskbar height */
       transition: top 0.3s ease;
+    }
+
+    .taskbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
     }
 
     .taskbar {

@@ -102,6 +102,9 @@
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  /* ✨ Add these lines */
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
 }
 
 /* Buttons */
@@ -127,3 +130,16 @@
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
   background: white;
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

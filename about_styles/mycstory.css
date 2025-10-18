@@ -7,6 +7,8 @@
   color: #62574b;
   margin-bottom: 2rem;
   margin-top: 0rem;
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
 }
 
 .story-content {
@@ -19,6 +21,7 @@
   width: 83%;
   max-width: 900px;
   transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .story-content h3 {

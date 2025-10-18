@@ -1,6 +1,6 @@
 /* Hero Background Image */
 .hero-image {
-  background-image: url('phero3.png');
+  background-image: url('phero6.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,20 +9,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding-bottom: 0rem;
+  padding-top: 0rem;
   margin: 0;
+  flex-direction: column;
 }
 
 .hero {
   text-align: center;
   padding: 1.5rem 2.5rem 2.5rem 2.5rem;
-  background: rgba(87, 73, 55, 0.75); soft brown overlay
-  backdrop-filter: blur(200px);
-  border-radius: 20px;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: -15rem;
-  margin-bottom: -15rem;
+  margin-top: 0rem;
 }
 
 
@@ -31,9 +29,9 @@
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   display: block;
   text-align: center;
   margin-left: auto;
@@ -43,18 +41,60 @@
 
 /* Description */
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-family: 'Lora', serif;
-  color: #f0f8e8;
+  color: #000000;
   margin-bottom: 3rem;
-  font-weight: 400;
-  max-width: 700px;
+  font-weight: 500;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.7;
-  display: block;
+  line-height: 1.8;
   text-align: center;
+  letter-spacing: 0.3px;
+
+  /* Layered text shadow for glow + depth */
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.3),   /* soft white glow */
+    2px 2px 6px rgba(0, 0, 0, 0.25),      /* subtle depth */
+    0 0 4px rgba(255, 255, 255, 0.4);    /* ambient shimmer */
 }
+
+
+.hero-link {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-link {
+  color: #753831;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #753831;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+.gallery-link:hover {
+  color: ##753831;
+  border-bottom-color: #753831;
+  background-color: #f0eae7;
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+}
+
 
 /* Button Container */
 .hero-buttons {

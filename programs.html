@@ -43,13 +43,46 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background-color: #f4f3f0; /* or transparent */
+      background-color: #ffffff; /* or transparent */
       backdrop-filter: blur(10px);
       transition: top 0.3s ease;
     }
 
     .background {
       padding-top: 70px; /* match taskbar height */
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 50px;
+      color: #ffffff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.8rem 1.4rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0;
+      background-color: rgba(79, 69, 53, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .back-to-top {
+        font-size: 1.4rem;
+        font-weight: 400; /* thicker font */
+      }
+    }
+
+    .back-to-top:hover {
+      background-color: #ffffff;
+      color: #f8b5c0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
@@ -68,6 +101,7 @@
         <a href="about.html">About</a>
         <a href="events.html">Events</a>
         <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
         <a href="resources.html">Resources</a>
         <a href="join.html">Join</a>
       </nav>
@@ -77,6 +111,9 @@
   <div class="background">
     <!-- Components -->
     <div class="section-wrapper" id="hero_programs"></div>
+    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      ⌃
+    </button>
     <div class="section-wrapper" id="youthgroup"></div>
     <div style="height: 100px;"></div>
     <div class="section-wrapper" id="socialevents"></div>
@@ -90,6 +127,7 @@
   <div id="footer"></div>
   <!-- Scripts -->
   <script src="scripts/loadComponents.js"></script>
+
   <script>
     const taskbar = document.querySelector('.taskbar');
     let lastScrollTop = 0;
@@ -106,6 +144,27 @@
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+
+  <script>
+    const backToTopBtn = document.querySelector('.back-to-top');
+    const heroSection = document.querySelector('#hero_programs');
+    const footer = document.querySelector('#footer');
+
+    window.addEventListener('scroll', () => {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      const footerTop = footer.offsetTop;
+
+      const scrollY = window.scrollY + window.innerHeight;
+
+      if (window.scrollY > heroBottom + 100 && scrollY < footerTop - 40) {
+        backToTopBtn.style.opacity = '1';
+        backToTopBtn.style.pointerEvents = 'auto';
+      } else {
+        backToTopBtn.style.opacity = '0';
+        backToTopBtn.style.pointerEvents = 'none';
+      }
     });
   </script>
 </body>

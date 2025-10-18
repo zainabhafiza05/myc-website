@@ -23,7 +23,7 @@
   margin: 0.8rem 0rem 0.8rem 0rem; /* 👈 adds space above and below the description */
   line-height: 1.6; /* 👈 improves readability */
   color: #574937;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* Grid layout */
@@ -36,12 +36,12 @@
 
 /* Individual event card */
 .event-card {
-  background-color: #ede7de;
+  background-color: #f6ebe2; /*#f5ede5	#f6ebe2*/
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   text-align: left;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-family: 'Open Sans', serif;
   color: #574937;
   line-height: 2;

@@ -94,29 +94,6 @@
       align-items: center;
     }
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin: 40px 0;
-    }
-
-    .hero-buttons button {
-      background-color: #627045;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .hero-buttons button:hover {
-      background-color: #4e5a34;
-    }
-
     section {
       padding: 64px 24px;
       margin-bottom: 48px;
@@ -125,11 +102,18 @@
     }
 
     .hero-buttons-vertical {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* two equal columns */
       gap: 16px;
-      align-items: center;
+      justify-content: center;
       margin: 40px 0;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero-buttons-vertical {
+        grid-template-columns: 1fr;
+      }
     }
 
     .hero-buttons-vertical button {
@@ -138,10 +122,11 @@
       border: none;
       border-radius: 8px;
       padding: 12px 24px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       width: 100%;
       max-width: 280px;
+      font-family: 'PlayFair Display', serif;
       transition: background-color 0.3s ease;
     }
 
@@ -261,6 +246,7 @@
         <a href="about.html">About</a>
         <a href="events.html">Events</a>
         <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
         <a href="resources.html">Resources</a>
         <a href="join.html">Join</a>
       </nav>

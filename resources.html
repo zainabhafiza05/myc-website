@@ -137,6 +137,37 @@
       padding: 0 1rem;
     }
 
+    .disclaimer {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #b44134;
+      padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+      border-radius: 12px;
+      margin-top: -2rem;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      line-height: 1.5rem;
+    }
+
+    .disclaimer-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #b44134;
+      padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+      border-radius: 12px;
+      margin-top: -2rem;
+      margin-bottom: 0.5rem;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      line-height: 2rem;
+    }
+
     @media (max-width: 600px) {
       .hero-buttons-vertical {
         grid-template-columns: 1fr;
@@ -244,6 +275,39 @@
       }
     }
 
+    .back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 50px;
+      color: #ffffff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.8rem 1.4rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0;
+      background-color: rgba(79, 69, 53, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .back-to-top {
+        font-size: 1.4rem;
+        font-weight: 400; /* thicker font */
+      }
+    }
+
+    .back-to-top:hover {
+      background-color: #ffffff;
+      color: #f8b5c0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
     @media (min-width: 768px) {
         .hero-content {
             grid-template-columns: 1fr 1fr;
@@ -294,19 +358,20 @@
           <div class="hero-text">
             <h1 class="hero-title">Community Resources</h1>
             <p class="hero-description">
-              Discover valuable resources, educational materials, and supportive links curated specifically for young Muslimahs and their families.
+              Explore valuable resources, educational materials, and supportive links curated specifically for young Muslimahs and their families.
             </p>
             <p class="hero-contribute">
-              Have a resource to share? <a href="submit-resource.html" class="contribute-link">Submit one here!</a>
+              Have a resource to share? <a href="https://forms.gle/YwS8bxFhknqWF2xx6" class="contribute-link">Submit one here!</a>
             </p>
           </div>
 
-          <div class="hero-buttons-vertical" style="margin-top: 100px;">
+          <div class="hero-buttons-vertical" id="buttonGroup" style="margin-top: 100px;">
             <button onclick="location.href='#myc'">MYC Resources</button>
-            <button onclick="location.href='#islamic'">Islamic Resources</button>
-            <button onclick="location.href='#college'">College Prep</button>
+            <button onclick="location.href='#islamic'">Islamic Learning</button>
+            <button onclick="location.href='#college'">College & Career</button>
+            <button onclick="location.href='#community'">Youth & Community</button>
+            <button onclick="location.href='#growth'">Personal Growth</button>
             <button onclick="location.href='#health'">Health & Wellness</button>
-            <button onclick="location.href='#community'">Community Support</button>
           </div>
         </div>
       </div>
@@ -314,11 +379,26 @@
   </div>
 
   <!-- Components -->
-   <div id="resmyc"></div>
+  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    Scroll Up ⌃
+  </button>
+  <div id="resmyc"></div>
   <div id="resislamic"></div>
   <div id="rescollege"></div>
-  <div style="height: 30px;"></div>
+  <div id="rescommunity"></div>
+  <div id="resgrowth"></div>
+  <div id="reshealth"></div>
 
+  <div>
+    <p class="disclaimer-title">
+      <strong>Disclaimer:</strong>
+    </p>
+    <p class="disclaimer">
+      All external content shared here belongs to its original creators and organizations. While MYC does not own or control this material, each resource has been carefully reviewed and selected by our team for its quality and relevance to the community. Inclusion does not imply official endorsement.
+    </p>
+  </div>
+
+  <div style="height: 50px;"></div>
   <div id="footer"></div>
 
   <!-- Scripts -->
@@ -339,6 +419,27 @@
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+
+  <script>
+    const backToTopBtn = document.querySelector('.back-to-top');
+    const heroSection = document.querySelector('#buttonGroup');
+    const footer = document.querySelector('#footer');
+
+    window.addEventListener('scroll', () => {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      const footerTop = footer.offsetTop;
+
+      const scrollY = window.scrollY + window.innerHeight;
+
+      if (window.scrollY > heroBottom + 100 && scrollY < footerTop - 40) {
+        backToTopBtn.style.opacity = '1';
+        backToTopBtn.style.pointerEvents = 'auto';
+      } else {
+        backToTopBtn.style.opacity = '0';
+        backToTopBtn.style.pointerEvents = 'none';
+      }
     });
   </script>
 </body>

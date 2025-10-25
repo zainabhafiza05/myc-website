@@ -34,3 +34,6 @@ loadComponent("details", "eventspage/details.html");
 loadComponent("resmyc", "resourcespage/resmyc.html");
 loadComponent("resislamic", "resourcespage/resislamic.html");
 loadComponent("rescollege", "resourcespage/rescollege.html");
+loadComponent("resgrowth", "resourcespage/resgrowth.html");
+loadComponent("reshealth", "resourcespage/reshealth.html");
+loadComponent("rescommunity", "resourcespage/rescommunity.html");

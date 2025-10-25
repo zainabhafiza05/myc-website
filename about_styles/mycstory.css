@@ -39,6 +39,10 @@
   font-family: 'Lora', serif;
 }
 
+.story-content strong {
+  font-weight: 600; /* or try 900 for maximum boldness */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .story-content {

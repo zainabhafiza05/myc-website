@@ -131,18 +131,23 @@ body, html {
 
 /* Tagline */
 .hero-tagline {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic;
-  font-size: 2rem;
-  color: #574937;
-  margin-bottom: 0.3rem;
-  text-transform: none;
+  font-family: 'Montserrat', sans-serif; /* Playfair Display Montserrat */
+  font-size: 1.25rem; /* smaller than the title, but readable */
+  color: #5a4432; /* slightly lighter than title for subtle contrast */
+  margin-top: 0.5rem; /* some spacing below the title */
+  margin-bottom: 1.5rem; /* space before hero buttons/section */
+  font-weight: 400; /* medium weight for readability without being too bold */
+  line-height: 1.4; /* comfortable spacing for readability */
+  text-align: center; /* center under the hero title */
+  /* letter-spacing: 2px; */
+  /* font-style: italic; */
 }
+
 
 /* Location */
 .hero-location {
   font-family: 'Libre Baskerville', serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   /* #627045 */
   color: #414d27;
   margin-bottom: 3rem;

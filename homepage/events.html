@@ -3,6 +3,7 @@
   <div class="section-wrapper"></div>
     <div class="events-grid-wrapper">
       <div class="events-grid">
+
         <div class="event-card">
           <div class="image-wrapper">
             <span class="event-label">Workshop</span>
@@ -20,6 +21,7 @@
             <a href="https://tinyurl.com/collegemyc25" class="rsvp-button" style="font-weight: bold;">REGISTER NOW</a>
           </div>
         </div>
+
         <div class="event-card">
           <div class="image-wrapper">
             <span class="event-label">Social</span>
@@ -37,6 +39,7 @@
             <a href="https://tinyurl.com/mycfallfest25" class="rsvp-button">REGISTER NOW</a>
           </div>
         </div>
+
         <div class="event-card">
           <div class="image-wrapper">
             <span class="event-label">Workshop</span>
@@ -54,6 +57,7 @@
             <a href="#" class="rsvp-button">REGISTER NOW</a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -61,3 +65,12 @@
     View MYC Calendar <i class="fas fa-arrow-right"></i>
   </a>
 </section>
+
+<script>
+  document.querySelectorAll('.event-card[data-href]').forEach(card => {
+    card.addEventListener('click', () => {
+      window.location.href = card.getAttribute('data-href');
+    });
+  });
+</script>
+

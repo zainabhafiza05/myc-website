@@ -29,6 +29,7 @@
 .footer-grid h4 {
   font-family: 'Inter', serif;
   font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 0.75rem;
   color: #574937; /* 👈 Brown */
 }

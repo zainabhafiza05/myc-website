@@ -170,6 +170,7 @@ body, html {
   box-shadow: 0 4px 15px rgba(87, 73, 55, 0.1);
   z-index: 3;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   top: 3rem;
@@ -245,5 +246,89 @@ body, html {
     font-size: 0.8rem;
   }
 }
+
+/* Mobile Hero Adjustments */
+@media (max-width: 768px) {
+
+  /* Smaller hero logo */
+  .hero-logo {
+    width: 220px;
+    height: 220px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Slightly smaller title */
+  .hero-title {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.6rem;
+    line-height: 1.1; /* tighter, elegant spacing */
+  }
+
+  /* Tagline spacing + size */
+  .hero-tagline {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Location text */
+  .hero-location {
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Reduce floating shapes so they don’t overwhelm mobile */
+  .shape-1, .shape-2, .shape-3, .shape-4, .shape-5 {
+    transform: scale(0.6);
+    opacity: 0.08;
+  }
+
+  .hero {
+    padding-top: 160px; /* was 100px */
+    min-height: calc(100vh - 60px); /* ensures hero stays visible */
+  }
+
+  .hero-content {
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Keep stats horizontal */
+  .stats-section {
+    flex-direction: row;        /* stay horizontal */
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 95%;
+    padding: 0.6rem 0.4rem;
+    transform: scale(0.9);      /* shrink slightly */
+    margin-top: 1rem;
+  }
+
+  /* Make each stat smaller */
+  .stat {
+    flex: 1;
+    min-width: auto;
+    margin: 0;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+    margin-bottom: -0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    margin-top: -10rem;
+    margin-bottom: 0rem;
+  }
+}
+
+
 
 

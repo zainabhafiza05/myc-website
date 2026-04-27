@@ -32,6 +32,7 @@
     html, body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     .taskbar.hide {
@@ -50,15 +51,10 @@
       transition: top 0.3s ease;
     }
 
-    .taskbar-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
-    }
-
     .background {
       padding-top: 70px; /* match taskbar height */
     }
+
 
     .back-to-top {
       position: fixed;
@@ -113,6 +109,11 @@
         <a href="resources.html">Resources</a>
         <a href="join.html">Join</a>
       </nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -174,6 +175,23 @@
         backToTopBtn.style.pointerEvents = 'none';
       }
     });
+  </script>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const rightSection = document.querySelector('.right-section');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        rightSection.classList.toggle('active');
+      });
+      rightSection.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          rightSection.classList.remove('active');
+        });
+      });
+    }
   </script>
 </body>
 </html>

@@ -20,6 +20,7 @@
 .footer-grid h3.myc-title {
   font-family: 'Tan Pearl', serif;
   font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   color: #627045; /* 👈 Tan pearl + girl color */
 }
@@ -86,5 +87,17 @@
   padding-top: 1rem;
   font-size: 0.85rem;
   color: #574937;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 2.25rem 1rem 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    margin-left: 0.65rem;
+  }
 }
 

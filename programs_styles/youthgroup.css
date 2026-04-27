@@ -73,5 +73,14 @@
   }
 }
 
+@media (max-width: 600px) {
+  .section-description {
+    font-size: 1.05rem;
+    max-width: none;
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+  }
+}
+
 
 

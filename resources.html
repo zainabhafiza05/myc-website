@@ -221,20 +221,36 @@
     }
 
     @media (max-width: 480px) {
+      .hero-content {
+        gap: 1rem;
+      }
+
       .hero-title {
-        font-size: 2rem;
+        font-size: 3rem !important;
+      }
+
+      .hero-description {
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-contribute {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .hero-buttons-vertical {
+        justify-items: center;
+        margin-top: 0rem !important;
+        padding: 0;
       }
     }
 
     .taskbar.hide {
       top: -100px; /* adjust based on your taskbar height */
       transition: top 0.3s ease;
-    }
-
-    .taskbar-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
     }
 
     .taskbar {
@@ -348,6 +364,11 @@
         <a href="resources.html">Resources</a>
         <a href="join.html">Join</a>
       </nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -442,6 +463,23 @@
         backToTopBtn.style.pointerEvents = 'none';
       }
     });
+  </script>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const rightSection = document.querySelector('.right-section');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        rightSection.classList.toggle('active');
+      });
+      rightSection.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          rightSection.classList.remove('active');
+        });
+      });
+    }
   </script>
 </body>
 </html>

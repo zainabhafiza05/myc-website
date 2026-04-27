@@ -252,9 +252,9 @@ body, html {
 
   /* Smaller hero logo */
   .hero-logo {
-    width: 220px;
-    height: 220px;
-    margin-top: 1.5rem;
+    width: 248px;
+    height: 248px;
+    margin-top: 0.6rem;
     margin-bottom: 0.5rem;
   }
 
@@ -287,7 +287,7 @@ body, html {
   }
 
   .hero {
-    padding-top: 160px; /* was 100px */
+    padding-top: 134px;
     min-height: calc(100vh - 60px); /* ensures hero stays visible */
   }
 
@@ -318,14 +318,17 @@ body, html {
   }
 
   .stat-number {
-    font-size: 1.3rem;
-    margin-bottom: -0.2rem;
+    font-size: 1.45rem;
+    height: 1.8rem;
+    line-height: 1.15;
+    margin-bottom: -0.5rem;
   }
 
   .stat-label {
     font-size: 0.75rem;
-    margin-top: -10rem;
+    margin-top: 0;
     margin-bottom: 0rem;
+    line-height: 1.2;
   }
 }
 

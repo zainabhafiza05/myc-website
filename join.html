@@ -98,12 +98,6 @@
       transition: top 0.3s ease;
     }
 
-    .taskbar-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 4rem 0rem 0rem; /* ✅ match events page spacing */
-    }
-
     .taskbar {
       position: fixed;
       top: 0;
@@ -124,6 +118,37 @@
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 24px;
+    }
+
+    .join-title-main {
+      white-space: normal;
+    }
+
+    .join-title-highlight {
+      background: linear-gradient(to right, #865651, #9b7b62, #817759, #627045, black);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    .join-mobile-spacer {
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .content h1 {
+        font-size: 2.8rem;
+      }
+
+      .join-title-main {
+        white-space: nowrap;
+      }
+
+      .join-mobile-spacer {
+        display: block;
+        height: 1.5rem;
+      }
     }
 
   </style>
@@ -150,17 +175,17 @@
           <a href="resources.html">Resources</a>
           <a href="join.html">Join</a>
         </nav>
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
     <div class="content">
       <h1>
-        Join the <span style="
-          background: linear-gradient(to right, #865651, #9b7b62, #817759, #627045, black);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-weight: bold;
-        ">MYC</span> Community
+        <span class="join-title-main">Join the <span class="join-title-highlight">MYC</span></span> Community
       </h1>
       <!-- COLOR CHOICE: a94c6f -->
       <p style="
@@ -176,6 +201,8 @@
       ">
         Be part of a growing community of Muslimahs making a difference. Every contribution helps strengthen our sisterhood and empower the next generation.
       </p>
+
+      <div class="join-mobile-spacer" aria-hidden="true"></div>
 
       <p style="
         color: #000000;
@@ -228,6 +255,25 @@
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
+
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger-menu');
+    const rightSection = document.querySelector('.right-section');
+
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        rightSection.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      rightSection.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          rightSection.classList.remove('active');
+        });
+      });
+    }
   </script>
 </body>
 </html>

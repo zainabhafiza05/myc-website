@@ -3,6 +3,7 @@
   top: 60px;
   left: 0;
   width: 100%;
+  box-sizing: border-box;
   background-color: white;
   padding: 0.8rem 2rem;
   font-family: 'Tan Pearl', sans-serif;
@@ -11,6 +12,8 @@
 }
 
 .taskbar-container {
+  width: 100%;
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -68,6 +71,33 @@
   padding-bottom: 4px;
 }
 
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
 
 @media (max-width: 600px) {
   .left-section {
@@ -75,6 +105,48 @@
     align-items: center;
     gap: 0.5rem;
     margin-left: 0rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .right-section {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e0dcd6;
+    display: none;
+    border-top: 1px solid #e0dcd6;
+    z-index: 999;
+  }
+
+  .right-section.active {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .right-section a {
+    padding: 0.5rem 0;
+    border-bottom: none;
+  }
+
+  .taskbar-container {
+    flex-wrap: nowrap;
+  }
+
+  .taskbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .right-section {
+    padding: 1.25rem 1rem;
   }
 }
 
